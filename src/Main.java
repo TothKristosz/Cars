@@ -7,13 +7,15 @@ public class Main {
         ujvehicle.task1();
         ujowner.task1();     
  
-        Pattern pattern = Pattern.compile("https://www.startr.hu/tudta-e/Amit-a--magyar-forgalmi-rendszamokrol-tudni-erdemes", Pattern.CASE_INSENSITIVE);
-        Matcher matcher = pattern.matcher("Visit https://www.startr.hu/tudta-e/Amit-a--magyar-forgalmi-rendszamokrol-tudni-erdemes!");
+        Pattern pattern = Pattern.compile("^[a-z] {3,4} [0-9] {3}$");
+        Matcher matcher = pattern.matcher(rend);
             boolean matchFound = matcher.find();
     if(matchFound) {
+        return true;
         System.out.println("Match found");
     }
      else {
+         return false;
         System.out.println("Match not found");
     }
   }
