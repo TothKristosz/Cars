@@ -1,7 +1,9 @@
+import java.io.IOException;
+
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         Vehicle ujvehicle = new Vehicle();
         Owner ujowner = new Owner();
-        System.out.println("a");
+    ujvehicle.task1();
     }
 }
